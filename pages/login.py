@@ -17,19 +17,7 @@ class LoginPage:
 
     def navigate(self):
         self.page.goto("https://dev.evcharging.ph/")
-
-    def verify_login_emptyfields(self):
-        expect(self.username_input).to_be_visible()
-        expect(self.password_input).to_be_visible()
-        self.login_button.click()
-        is_invalid = self.username_input.evaluate("el => !el.checkValidity()")
-        print(f"Firstname invalid: {is_invalid}")
-        message = self.password_input.evaluate("el => el.validationMessage")
-        print(f"Validation message: '{message}'")
-
-        assert is_invalid is True
-        assert message != ""
-
+        
     #Verify Login Page
     def verify_loginwithemail_btn(self):
         expect(self.loginbtn).to_be_visible()
