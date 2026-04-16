@@ -84,7 +84,7 @@ class LoginPage:
         self.page.wait_for_load_state(timeout=10000)
         expect(self.map).to_be_visible()
 
-    # Verify Login and Logout
+    # Verify Login and Logoutasdasdasdasd
     def verify_logout(self, username: str, password: str):
         self.verify_loginwithemail_btn()
         self.username_input.fill(username)
